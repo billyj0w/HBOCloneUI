@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    color: white;
+    font-family: 'Free Sans', sans-serif;
+    overflow-x: hidden;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+.bg{
+    background: rgb(109,0,255);
+    background: linear-gradient(90deg, rgba(109,0,255,1) 3%, rgba(117,55,200,1) 20%, rgba(154,5,223,1) 33%, rgba(155,56,200,1) 56%, rgba(150,44,199,1) 68%, rgba(109,0,255,1) 100%);
+    filter: brightness(20%);
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+}
+header{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-around;
+}
+header img{
+    width: 145px;
+    cursor: pointer;
+}
+header h1{
+    text-align: center;
+    font-size: 36px;
+}
+.main{
+    background: linear-gradient(rgba(0, 0, 0, 0.5) 0.48%, rgba(0, 0, 0, 0.47) 3.73%, rgba(0, 0, 0, 0.443) 6.67%, rgba(0, 0, 0, 0.424) 9.29%, rgba(0, 0, 0, 0.404) 11.98%, rgba(0, 0, 0, 0.384) 14.88%, rgba(0, 0, 0, 0.37) 18.18%, rgba(0, 0, 0, 0.34) 25%, rgba(0, 0, 0, 0.32) 32.4%, rgba(0, 0, 0, 0.28) 39.23%, rgba(0, 0, 0, 0.24) 47.42%, rgba(0, 0, 0, 0.2) 57.17%, rgba(0, 0, 0, 0.12) 68.67%, rgba(0, 0, 0, 0.06) 82.12%, rgba(0, 0, 0, 0) 97.71%);
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-around;
+    align-items: center;
+}
+.profiles{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+.card h3{
+    font-weight: 300;
+    padding: 12%;
+}
+.card img{
+    width: 135px;
+    border-radius: 90px;
+}
+.purple img{
+    border: 5px solid rgb(109,0,255);
+}
+.pink img{
+    border: 5px solid rgb(212, 61, 139);
+}
+.card:hover{
+    transform: scale(1.2);
+}
+.addProfile{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-transform: uppercase;
+    margin: 5% 0 0 0;
+}
+.addProfile a{
+    background: rgba(105, 105, 105, 0.400);
+    border: 3px solid rgba(105, 105, 105, 0.0);
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin: 0 1%;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.1s all;
+}
+.addProfile a:hover{
+    background: black;
+    border: 3px solid rgb(109,0,255);
+}
+
+.gerenciarPerfis{
+    border: 3px solid rgba(105, 105, 105, 0.0);
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.1s all;
+}
+.gerenciarPerfis:hover{
+    background: rgba(105, 105, 105, 0.400);
+    border: 3px solid rgba(105, 105, 105, 0.0);
+}
+@media only screen and (max-width: 480px) {
+    header img{
+        width: 100px;
+        cursor: pointer;
+    }
+    header h1{
+        text-align: center;
+        font-size: 26px;
+    }
+    .profiles{
+        flex-direction: column;
+    }
+    .addProfile{
+        flex-direction: column;
+    }
+    .addProfile a{
+        margin: 1% 0;
+    }
+}
