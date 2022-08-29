@@ -11,6 +11,7 @@
     <link href='font/FreeSans.ttf' rel='stylesheet' type='text/css'>
 </head>
 <body>
+    <div id="bgNavOpen"></div>
     <div class="bg"></div>
     <nav>
         <div class="navContent">
@@ -69,23 +70,26 @@
                 <p>Não foram os sonhos que os tornaram reis. Foram os dragões.</p>
             </div>
                 <div class="info">
-                    <img src="img/play.svg" alt="play">
+                    <div class="playButton"><img src="img/play.svg" alt="play"></div>
                     <a class="button" href="#">Saiba Mais</a>
                 </div>
         </div>
     </div>
     <script>
-        const menu = document.querySelector('.menu')
+            const menu = document.querySelector('.menu')
             const close = document.querySelector('.close')
             const nav = document.querySelector('nav')
-
+            var bgNavOpen = document.getElementById('bgNavOpen')
+            
             menu.addEventListener('click', () => {
-                nav.classList.add('open-nav')
+                nav.classList.add('open-nav');  
+                bgNavOpen.style.display = 'block';
             })
 
             close.addEventListener('click', () => {
                 nav.style.transition =  "transform .5s ease-in-out";
-                nav.classList.remove('open-nav')
+                bgNavOpen.style.display = 'none';
+                nav.classList.remove('open-nav');
             })
     </script>
 </body>
