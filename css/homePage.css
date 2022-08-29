@@ -19,6 +19,49 @@ body{
     height: 200vh;
     z-index: -1;
 }
+nav{
+    position: fixed;
+    z-index: 999;
+    display: flex;
+    height: 100vh;
+    background: black;
+    left: 0;
+    top: 0;
+    width: 20%;
+    flex-direction: column;
+    align-content: center;
+    align-items: flex-start;
+    transform: translateX(-100%);
+}
+nav a{
+    text-decoration: none;
+    color:darkgray;
+    font-weight: bold;
+    padding: 5% 0;
+    font-size: 1.3rem;
+    transition: 0.2s all;
+}
+nav a:hover{
+    color: white;
+    font-size: 1.4rem;
+}
+.navContent{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 20%;
+}
+.close{
+    color: darkgray;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 10% 0;
+    font-weight: bold;
+}
+.open-nav{
+    transform: translateX(0);
+    transition: transform .5s ease-in-out;
+}
 header{
     position: fixed;
     height: 8vh;
@@ -27,17 +70,25 @@ header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    z-index: 999;
+    z-index: 998;
+}
+.menu{
+    width: 20px;
+    cursor: pointer;
 }
 .left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 30%;
+    gap: 20px;
     padding-left: 3%;
 }
 .left a{
     text-decoration: none;
     color: white;
     font-weight: bold;
-    opacity: 0.5;
+    opacity: 0.8;
     transition: 0.2s all;
 }
 .left a:hover{

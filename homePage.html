@@ -12,8 +12,26 @@
 </head>
 <body>
     <div class="bg"></div>
+    <nav>
+        <div class="navContent">
+            <h1 class="close">X</h1>
+            <a href="#">Início</a>
+            <a href="#">Séries</a>
+            <a href="#">Filmes</a>
+            <a href="#">Originais</a>
+            <a href="#">Adicionados</br>Recentemente</a>
+            <a href="#">Últimos Dias</a>
+            <a href="#">Em breve</a>
+            <a href="#">Em alta</a>
+        </div>
+    </nav>
     <header>
         <div class="left">
+            <svg class="menu"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                viewBox="0 0 50 50"
+                style=" fill:#fff;">
+                <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 Z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 Z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 Z"></path>
+            </svg>
             <a href="">Filmes</a>
             <a href="">Séries</a>
         </div>
@@ -39,6 +57,19 @@
                 </div>
         </div>
     </div>
+    <script>
+        const menu = document.querySelector('.menu')
+            const close = document.querySelector('.close')
+            const nav = document.querySelector('nav')
 
+            menu.addEventListener('click', () => {
+                nav.classList.add('open-nav')
+            })
+
+            close.addEventListener('click', () => {
+                nav.style.transition =  "transform .5s ease-in-out";
+                nav.classList.remove('open-nav')
+            })
+    </script>
 </body>
 </html>
