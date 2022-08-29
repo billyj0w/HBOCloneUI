@@ -51,6 +51,37 @@ nav a:hover{
     width: 80%;
     margin-left: 20%;
 }
+.risco{
+    height: 1px;
+    opacity: 0.6;
+    background: darkgray;
+    width: 80%;
+}
+.navImg{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.navImg img{
+    width: 80px;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.2s all;
+}
+.navImg img:hover{
+    opacity: 1;
+}
+.contentNavImg1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.contentNavImg2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .close{
     color: darkgray;
     font-size: 1.5rem;
@@ -131,6 +162,7 @@ header img{
     width: 100%;
     height: 80vh;
     background-image: url("https://billyj0w.github.io/HBOCloneUI/img/house_of_the_dragon.jpeg");
+    background-position: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -193,5 +225,47 @@ header img{
     padding: 4%;
     display: flex;
     flex-direction: column;
+}
+@media only screen and (max-width: 950px){
+    nav{
+        transform: translateX(-150%);
+        width: 30%;
+    }
+}
+@media only screen and (max-width: 768px){
+    header{
+        transform: scale(0.9);
+    }
+    header a{
+        display: none;
+    }
+    nav{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 560px){
+    header{
+        transform: scale(0.9);
+    }
+    header img{
+        width: 90px;
+    }
+    nav{
+        transform: translateX(-200%);
+        width: 55%;
+    }
+    .open-nav{
+        transition: transform .1s ease-in-out;
+    }
+}
+@media only screen and (max-width: 400px){
+    nav{
+        transform: translateX(-350%);
+        width: 85%;
+    }
+    .search{
+        display: none;
+    }
 }
 
