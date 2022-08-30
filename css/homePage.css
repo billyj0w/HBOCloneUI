@@ -237,6 +237,58 @@ header img{
     display: flex;
     flex-direction: column;
 }
+.keepWatching{
+    width: 200vw;
+    height: 40vh;
+    background: linear-gradient(to bottom,rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.03) 60%);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    overflow: hidden;
+    padding-left: 5vw;
+}
+.keepWatching a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.keepWatching span{
+    opacity: 0.7;
+    font-weight: 500;
+}
+.keepWatchingContent{
+    display: grid;
+    width: 100%;
+    flex-direction: row;
+    grid-template-columns: repeat(9, 1fr);
+    column-gap: 1px !important;
+    gap: 5px;
+}
+.spanKeepWatching span:hover{
+    transform: scale(1.2);
+}
+.card{
+    display: flex;
+    width: 50%;
+    gap: 20px;
+    flex-direction: column;
+}
+.card a{
+    margin: 0;
+}
+.card img{
+    border: 2px solid rgba(111, 0, 255, 0);
+    transition: 0.2s all;
+    cursor: pointer;
+    opacity: 0.7;
+    padding: 2px;
+}
+.card img:hover{
+    opacity: 1;
+    border: 2px solid rgb(109,0,255);
+    border-radius: 5px;
+}
 @media only screen and (max-width: 950px){
     nav{
         transform: translateX(-150%);

@@ -43,7 +43,7 @@
 
         </div>
     </nav>
-    <header>
+    <header id="header">
         <div class="left">
             <svg class="menu"  xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                 viewBox="0 0 50 50"
@@ -75,12 +75,55 @@
                 </div>
         </div>
     </div>
+    <div class="keepWatching" id="keepWatching">
+        <a href="#">Continue assistindo <span class="spanKeepWatching">></span></a>
+        <div class="keepWatchingContent" id="keepWatchingContent">
+            <div class="card">
+                <img src="img/profilePic1.jpg" alt="continue assistindo">
+                <a href="#">Game of Thrones <span>T1 E3</span></a>
+            </div>
+            <div class="card">
+                <img src="img/profilePic1.jpg" alt="continue assistindo">
+                <a href="#">Game of Thrones <span>T1 E3</span></a>
+            </div>
+            <div class="card">
+                <img src="img/profilePic1.jpg" alt="continue assistindo">
+                <a href="#">Game of Thrones <span>T1 E3</span></a>
+            </div>
+            <div class="card">
+                <img src="img/profilePic1.jpg" alt="continue assistindo">
+                <a href="#">Game of Thrones <span>T1 E3</span></a>
+            </div>
+            <div class="card">
+                <img src="img/profilePic1.jpg" alt="continue assistindo">
+                <a href="#">Game of Thrones <span>T1 E3</span></a>
+            </div>
+            <div class="card">
+                <img src="img/profilePic1.jpg" alt="continue assistindo">
+                <a href="#">Game of Thrones <span>T1 E3</span></a>
+            </div>  
+            <div class="card">
+                <img src="img/profilePic1.jpg" alt="continue assistindo">
+                <a href="#">Game of Thrones <span>T1 E3</span></a>
+            </div>
+            <div class="card">
+                <img src="img/profilePic1.jpg" alt="continue assistindo">
+                <a href="#">Game of Thrones <span>T1 E3</span></a>
+            </div>
+            <div class="card">
+                <img src="img/profilePic2.jpg" alt="continue assistindo">
+                <a href="#">Game of Thrones <span>T1 E3</span></a>
+            </div>
+
+        </div>
+    </div>
     <script>
-            const menu = document.querySelector('.menu')
-            const close = document.querySelector('.close')
-            const nav = document.querySelector('nav')
-            var bgNavOpen = document.getElementById('bgNavOpen')
-            
+            const menu = document.querySelector('.menu');
+            const close = document.querySelector('.close');
+            const nav = document.querySelector('nav');
+            var bgNavOpen = document.getElementById('bgNavOpen');
+            var header = document.getElementById('header');
+
             menu.addEventListener('click', () => {
                 nav.classList.add('open-nav');  
                 bgNavOpen.style.display = 'block';
@@ -91,6 +134,64 @@
                 bgNavOpen.style.display = 'none';
                 nav.classList.remove('open-nav');
             })
+            bgNavOpen.addEventListener('click', () => {
+                nav.style.transition =  "transform .5s ease-in-out";
+                bgNavOpen.style.display = 'none';
+                nav.classList.remove('open-nav');
+            })
+
+            var keepWatching = document.getElementById('keepWatching');
+            var keepWatchingContent = document.getElementById('keepWatchingContent');
+
+            let pressed = false;
+            let startx;
+            let x;
+
+            keepWatching.addEventListener('mousedown', (e)=>{
+                pressed = true;
+                startx = e.offsetX - keepWatchingContent.offsetLeft;
+                keepWatching.style.cursor = 'grabbing';
+            });
+
+            keepWatching.addEventListener('mouseenter', ()=>{
+                keepWatching.style.cursor = 'grab';
+            });
+
+            keepWatching.addEventListener('mouseleave', ()=>{
+                keepWatching.style.cursor = 'default';
+            });
+
+            keepWatching.addEventListener('mouseup', ()=>{
+                keepWatching.style.cursor = 'grab';
+            });
+
+            window.addEventListener('mouseup', ()=>{
+                pressed = false;
+            });
+
+            keepWatching.addEventListener('mousemove', (e)=>{
+                if(!pressed) return;
+                e.preventDefault();
+                
+                x = e.offsetX;
+                keepWatchingContent.style.marginLeft  = `${x - startx}px`;
+
+                checkboundary()
+            })
+
+            function checkboundary(){
+                let outer = keepWatching.getBoundingClientRect();
+                let inner = keepWatchingContent.getBoundingClientRect();
+                console.log(inner) 
+                console.log(outer)
+                if(parseInt(keepWatchingContent.style.marginLeft) > 0){
+                    keepWatchingContent.style.pointerEvents = 'none';
+                    keepWatchingContent.style.marginLeft = '0px';
+                }else if(inner.right < outer.right){
+                    keepWatchingContent.style.marginLeft = `-${inner.width - outer.width}px`;
+                }
+            }
+            checkboundary()
     </script>
 </body>
 </html>
