@@ -193,15 +193,21 @@ header img{
 }
 .houseOfDragon{
     background-position: center;
+    background-size: cover;
     background-image: url("https://billyj0w.github.io/HBOCloneUI/img/house_of_the_dragon.jpeg");
 }
 .seraIssoAmor{
     background-position: center;
+    background-size: cover;
     background-image: url("https://billyj0w.github.io/HBOCloneUI/img/tile.jpg");
 }
 .assassinatoDeAluguel{
     background-position: center;
+    background-size: cover;
     background-image: url("https://billyj0w.github.io/HBOCloneUI/img/tile2.jpg");
+}
+:root {
+    --swiper-theme-color: #fff !important;
 }
 .bgBlack{
     position: absolute;
