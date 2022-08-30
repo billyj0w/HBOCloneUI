@@ -13,9 +13,9 @@ body{
 #bgNavOpen{
     width: 100%;
     height: 100vh;
+    position: fixed;
     background: black;
     z-index: 998;
-    position: absolute;
     opacity: 0.6;
     display: none;
 }
@@ -170,12 +170,38 @@ header img{
 .main{
     width: 100%;
     height: 80vh;
-    background-image: url("https://billyj0w.github.io/HBOCloneUI/img/house_of_the_dragon.jpeg");
     background-position: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-end;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+  .swiper-slide {
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+.houseOfDragon{
+    background-position: center;
+    background-image: url("https://billyj0w.github.io/HBOCloneUI/img/house_of_the_dragon.jpeg");
+}
+.seraIssoAmor{
+    background-position: center;
+    background-image: url("https://billyj0w.github.io/HBOCloneUI/img/tile.jpg");
+}
+.assassinatoDeAluguel{
+    background-position: center;
+    background-image: url("https://billyj0w.github.io/HBOCloneUI/img/tile2.jpg");
 }
 .bgBlack{
     position: absolute;
@@ -213,6 +239,7 @@ header img{
     align-items: center;
     width: 1000px;
     gap: 16px;
+    padding-bottom: 2vh;
 }
 .info img{
     width: 20px;
@@ -230,6 +257,9 @@ header img{
 }
 .infoSeries{
     margin: 3% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .mainContent{
     z-index: 5;
@@ -258,19 +288,15 @@ header img{
     font-weight: 500;
 }
 .keepWatchingContent{
-    display: grid;
+    display: flex;
     width: 100%;
     flex-direction: row;
-    grid-template-columns: repeat(9, 1fr);
     column-gap: 1px !important;
     gap: 5px;
 }
-.spanKeepWatching span:hover{
-    transform: scale(1.2);
-}
 .card{
     display: flex;
-    width: 50%;
+    width: 7%;
     gap: 20px;
     flex-direction: column;
 }
@@ -289,6 +315,32 @@ header img{
     border: 2px solid rgb(109,0,255);
     border-radius: 5px;
 }
+.swiper2 {
+    width: 60%;
+  }
+  .slide2 {
+    background: #882525;
+    height: 35vh !important;
+  }
+  .slide2:nth-child(2) {
+    background: #8acc7d;
+  }
+  .slide2:nth-child(3) {
+    background: #b7cc7d;
+  }
+  .slide2:nth-child(4) {
+    background: #9eb75c;
+  }
+  .slide2:nth-child(5) {
+    background: #7da8cc;
+  }
+  .slide2:nth-child(6) {
+    background: #96cc7d;
+  }
+  .slide2:nth-child(7) {
+    background: #cc7dae;
+  }
+ 
 @media only screen and (max-width: 950px){
     nav{
         transform: translateX(-150%);
