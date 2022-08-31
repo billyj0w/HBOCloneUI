@@ -149,31 +149,31 @@
                   <div class="swiper-slide slide2">
                     <img class="playbutton" src="img/play.svg" alt="play">
                     <a href="#">Será isso Amor? <span>T1 E1</span></a>
-                    <div class="riscoProgress"></div>
+                    <div class="riscoProgress2"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
                     <img class="playbutton" src="img/play.svg" alt="play">
                     <a href="#">Assassinato de Aluguel <span>T1 E5</span></a>
-                    <div class="riscoProgress"></div>
+                    <div class="riscoProgress3"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
                     <img class="playbutton" src="img/play.svg" alt="play">
                     <a href="#">Rick and Morty <span>T2 E6</span></a>
-                    <div class="riscoProgress"></div>
+                    <div class="riscoProgress4"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
                     <img class="playbutton" src="img/play.svg" alt="play">
                     <a href="#">Game of Thrones <span>T4 E2</span></a>
-                    <div class="riscoProgress"></div>
+                    <div class="riscoProgress2"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
                     <img class="playbutton" src="img/play.svg" alt="play">
                     <a href="#">House of Dragron <span>T1 E2</span></a>
-                    <div class="riscoProgress"></div>
+                    <div class="riscoProgress3"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
@@ -185,19 +185,19 @@
                   <div class="swiper-slide slide2">
                     <img class="playbutton" src="img/play.svg" alt="play">
                     <a href="#">Assassinato de Aluguel <span>T1 E5</span></a>
-                    <div class="riscoProgress"></div>
+                    <div class="riscoProgress4"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
                     <img class="playbutton" src="img/play.svg" alt="play">
                     <a href="#">Rick and Morty <span>T2 E6</span></a>
-                    <div class="riscoProgress"></div>
+                    <div class="riscoProgress2"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
                     <img class="playbutton" src="img/play.svg" alt="play">
                     <a href="#">Game of Thrones <span>T4 E2</span></a>
-                    <div class="riscoProgress"></div>
+                    <div class="riscoProgress3"></div>
                   </div>
 
                 </div>
@@ -273,6 +273,17 @@
                 bgNavOpen.style.display = 'none';
                 nav.classList.remove('open-nav');
             })
+
+            var myNav = document.getElementById('header');
+
+            window.onscroll = function() {
+              "use strict";
+              if (document.body.scrollTop >= 500 || document.documentElement.scrollTop >= 500) {
+                myNav.classList.add("scroll");
+              } else {
+                myNav.classList.remove("scroll");
+              }
+            };
     </script>
 </body>
 </html>
