@@ -248,7 +248,7 @@ header img{
     padding-bottom: 2vh;
 }
 .info img{
-    width: 20px;
+    width: 1rem !important;
     height: auto;
     transition: 0.2s all;
 }
@@ -272,6 +272,12 @@ header img{
     padding: 4%;
     display: flex;
     flex-direction: column;
+}
+.mainContent img{
+    width: 35rem;
+}
+.logoSeries img{
+    width: 8rem;
 }
 .keepWatching{
     width: 200vw;
@@ -300,39 +306,47 @@ header img{
     column-gap: 1px !important;
     gap: 5px;
 }
-.card{
-    display: flex;
-    width: 7%;
-    gap: 20px;
-    flex-direction: column;
-}
-.card a{
-    margin: 0;
-}
-.card img{
-    border: 2px solid rgba(111, 0, 255, 0);
-    transition: 0.2s all;
-    cursor: pointer;
-    opacity: 0.7;
-    padding: 2px;
-}
 .card img:hover{
     opacity: 1;
     border: 2px solid rgb(109,0,255);
     border-radius: 5px;
 }
+.playbutton{
+    width: 1.2rem;
+    padding: 15px;
+}
+.riscoProgress{
+    width: 100%;
+    height: 5px;
+    background: white;
+}
+.swiper-button-next:after, .swiper-button-prev:after{
+    font-size: 1rem !important;
+}
 .swiper2 {
     width: 60%;
   }
   .slide2 {
-    background: #882525;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://billyj0w.github.io/HBOCloneUI/img/house_of_the_dragon.jpeg");
+    opacity: 0.9;
     height: 35vh !important;
+    cursor: pointer;
+    transition: 0.6s all;
+  }
+  .slide2:hover{
+    opacity: 1;
   }
   .slide2:nth-child(2) {
-    background: #8acc7d;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://billyj0w.github.io/HBOCloneUI/img/tile.jpg");
   }
   .slide2:nth-child(3) {
-    background: #b7cc7d;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://billyj0w.github.io/HBOCloneUI/img/tile2.jpg");
   }
   .slide2:nth-child(4) {
     background: #9eb75c;
@@ -346,11 +360,18 @@ header img{
   .slide2:nth-child(7) {
     background: #cc7dae;
   }
- 
+@media only screen and (max-width: 1350px){
+    .mainContent img{
+        width: 30rem;
+    }
+}
 @media only screen and (max-width: 950px){
     nav{
         transform: translateX(-150%);
         width: 30%;
+    }
+    .mainContent img{
+        width: 25rem;
     }
 }
 @media only screen and (max-width: 768px){
@@ -387,6 +408,9 @@ header img{
     }
     .search{
         display: none;
+    }
+    .mainContent img{
+        width: 20rem;
     }
 }
 

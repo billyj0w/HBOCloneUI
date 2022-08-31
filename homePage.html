@@ -126,68 +126,82 @@
             <div class="swiper2">
                 <div class="swiper-wrapper">
 
-                  <div class="swiper-slide slide2">
-                    <div class="card">
-                        <img src="img/profilePic1.jpg" alt="continue assistindo">
+                    <div class="swiper-slide slide2">
+                        <img class="playbutton" src="img/play.svg" alt="play">
                         <a href="#">Game of Thrones <span>T1 E3</span></a>
-                    </div>
+                        <div class="riscoProgress"></div>
+                      </div>
+
+                  <div class="swiper-slide slide2">
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
-                    <div class="card">
-                        <img src="img/profilePic1.jpg" alt="continue assistindo">
-                        <a href="#">Game of Thrones <span>T1 E3</span></a>
-                    </div>
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
-                    <div class="card">
-                        <img src="img/profilePic1.jpg" alt="continue assistindo">
-                        <a href="#">Game of Thrones <span>T1 E3</span></a>
-                    </div>
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
-                    <div class="card">
-                        <img src="img/profilePic1.jpg" alt="continue assistindo">
-                        <a href="#">Game of Thrones <span>T1 E3</span></a>
-                    </div>
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
-                    <div class="card">
-                        <img src="img/profilePic1.jpg" alt="continue assistindo">
-                        <a href="#">Game of Thrones <span>T1 E3</span></a>
-                    </div>
-                  </div>
-                  
-                  <div class="swiper-slide slide2">
-                    <div class="card">
-                        <img src="img/profilePic1.jpg" alt="continue assistindo">
-                        <a href="#">Game of Thrones <span>T1 E3</span></a>
-                    </div>
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
-                    <div class="card">
-                        <img src="img/profilePic1.jpg" alt="continue assistindo">
-                        <a href="#">Game of Thrones <span>T1 E3</span></a>
-                    </div>
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
                   </div>
 
                   <div class="swiper-slide slide2">
-                    <div class="card">
-                        <img src="img/profilePic1.jpg" alt="continue assistindo">
-                        <a href="#">Game of Thrones <span>T1 E3</span></a>
-                    </div>
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
+                  </div>
+
+                  <div class="swiper-slide slide2">
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
+                  </div>
+
+                  <div class="swiper-slide slide2">
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
+                  </div>
+
+                  <div class="swiper-slide slide2">
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
+                  </div>
+
+                  <div class="swiper-slide slide2">
+                    <img class="playbutton" src="img/play.svg" alt="play">
+                    <a href="#">Game of Thrones <span>T1 E3</span></a>
+                    <div class="riscoProgress"></div>
                   </div>
 
                 </div>
               </div>
     </div>
-
-      
-      
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script>
       var swiper = new Swiper(".mySwiper", {
@@ -205,7 +219,33 @@
       <script>
         var swiper2 = new Swiper(".swiper2", {
           watchSlidesProgress: true,
-          slidesPerView: 3,
+          slidesPerView: 8,
+          spaceBetween: 25,
+          breakpoints: {
+            // when window width is >= 320px
+            100: {
+            slidesPerView: 2,
+            spaceBetween: 20
+            },
+            // when window width is >= 480px
+            500: {
+            slidesPerView: 3,
+            spaceBetween: 30
+            },
+            // when window width is >= 640px
+            800: {
+            slidesPerView: 4,
+            spaceBetween: 40
+            },
+            1500: {
+            slidesPerView: 5,
+            spaceBetween: 40
+            },
+            1800: {
+            slidesPerView: 8,
+            spaceBetween: 40
+            }
+        }
         });
       </script>
 
